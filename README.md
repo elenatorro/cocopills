@@ -2,7 +2,7 @@
 
 Just another project I will never finish, no hype needed
 
-## Set up
+## Setup
 
 Clone project
 
@@ -23,7 +23,7 @@ Run the docker image in the current directory, setting a custom 'cocopills' volu
 $ docker run --network host -v "$(pwd):/cocopills" -it cocopills/cocopills-docker
 ```
 
-You'll be in the docker image. Go to the `cocopills` directory **in** in the image and start the server:
+You'll be in the docker image. Go to the `cocopills` directory inside the image and start the server:
 
 ```sh
 docker@youruser:/$ cd cocopills
