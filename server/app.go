@@ -1,15 +1,19 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	route_handler := gin.Default()
+	router := gin.Default()
+	router.LoadHTMLGlob("./server/templates/**")
 
-	route_handler.GET("/ping", func(context *gin.Context) {
-		context.JSON(200, gin.H{
-			"message": "pong",
+	router.GET("/", func(context *gin.Context) {
+		context.HTML(http.StatusOK, "index.tmpl", gin.H{
+			"title": "Cocopills",
 		})
 	})
 
-	route_handler.Run()
+	router.Run()
 }

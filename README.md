@@ -30,4 +30,4 @@ docker@youruser:/$ cd cocopills
 docker@youruser:/$ go run server/app.go
 ```
 
-Go to [http://localhost:8080/ping](http://localhost:8080/ping) to test it works
+Go to [http://localhost:8080](http://localhost:8080)
