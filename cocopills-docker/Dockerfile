@@ -35,11 +35,11 @@ RUN sudo wget https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
 RUN sudo tar -xzvf go1.16.3.linux-amd64.tar.gz
 RUN sudo mv go /usr/local
 ENV PATH=$PATH:/usr/local/go/bin
-RUN go mod init
+
 
 ################################################################################
-# Install Gin Gonic                                                            #
+# Install Go dependencies                                                      #
 ################################################################################
 
-RUN go get -u github.com/gin-gonic/gin
 RUN go env -w GO111MODULE=auto
+RUN go get -u github.com/gin-gonic/gin

@@ -13,19 +13,20 @@ $ git clone git@github.com:elenatorro/cocopills.git
 Build docker image locally:
 
 ```sh
+$ cd cocopills
 $ docker build -t cocopills/cocopills-docker cocopills-docker
 ```
 
-The project is in the `cocopills` directory. Run docker image **outside** the directory:
+Run the docker image in the current directory, setting a custom 'cocopills' volume:
 
 ```sh
-$ docker run --network host -v /cocopills:/mnt/cocopills -it cocopills/cocopills-docker
+$ docker run --network host -v "$(pwd):/cocopills" -it cocopills/cocopills-docker
 ```
 
 You'll be in the docker image. Go to the `cocopills` directory **in** in the image and start the server:
 
 ```sh
-docker@youruser:/$ cd /mnt/cocopills
+docker@youruser:/$ cd cocopills
 docker@youruser:/$ go run server/app.go
 ```
 
