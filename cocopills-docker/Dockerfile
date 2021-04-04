@@ -38,8 +38,7 @@ ENV PATH=$PATH:/usr/local/go/bin
 
 
 ################################################################################
-# Install Go dependencies                                                      #
+# Set up Go                                                                    #
 ################################################################################
 
 RUN go env -w GO111MODULE=auto
-RUN go get -u github.com/gin-gonic/gin

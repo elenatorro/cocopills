@@ -25,9 +25,11 @@ $ docker run --network host -v "$(pwd):/cocopills" -it cocopills/cocopills-docke
 
 You'll be in the docker image. Go to the `cocopills` directory inside the image and start the server:
 
+(the dependencies will download the first time)
+
 ```sh
 docker@youruser:/$ cd cocopills
-docker@youruser:/$ go run server/app.go
+docker@youruser:/$ go run server.go
 ```
 
 Go to [http://localhost:8080](http://localhost:8080)
