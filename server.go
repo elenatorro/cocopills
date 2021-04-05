@@ -7,7 +7,8 @@ import (
 
 func main() {
 	router := gin.Default()
-	router.LoadHTMLGlob("server/templates/*.tmpl")
+	router.LoadHTMLGlob("./server/templates/*.tmpl")
+	router.Static("/assets", "./public/assets")
 
 	viewRoutes := router.Group("/")
 	views.HomeView(viewRoutes)

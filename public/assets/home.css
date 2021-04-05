@@ -1,0 +1,122 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ccp-background-color: #FAFAFA;
+  --ccp-primary-color: #3959FF;
+  --ccp-secondary-color: #FF3981;
+  --ccp-contrast-color: #0AA359;
+  --ccp-base-color: #1E2652;
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--ccp-background-color);
+  flex-direction: column;
+  align-items: flex-end;
+  vertical-align: middle;
+  color: var(--ccp-base-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 144px;
+  padding: 20rem 20rem 0;
+  text-align: right;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+  padding: 0 20rem 0;
+  text-align: right;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+
+.ball {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  position: fixed;
+  opacity: 50%;
+  z-index: 0;
+}
+
+.b-primary {
+  background-color: var(--ccp-primary-color);
+  right: -200px;
+  top: -100px;
+}
+
+.title {
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: calc(144px * 9 / 2);
+  height: 50px;
+  bottom: 0;
+  left: 20rem;
+  background:
+    /* c */
+    radial-gradient(10px circle at 43.5px 28px, var(--ccp-primary-color) 100%, transparent 0),
+    /* o */
+    radial-gradient(10px circle at 120px 28px, var(--ccp-secondary-color) 100%, transparent 0),
+    radial-gradient(10px circle at 140px 28px, var(--ccp-primary-color) 100%, transparent 0),
+    /* c */
+    radial-gradient(10px circle at 223.5px 20px, var(--ccp-secondary-color) 100%, transparent 0),
+    radial-gradient(10px circle at 213.5px 36px, var(--ccp-contrast-color) 100%, transparent 0),
+    radial-gradient(10px circle at 233.5px 36px, var(--ccp-primary-color) 100%, transparent 0),
+    /* o */
+    radial-gradient(10px circle at 303.5px 28px, var(--ccp-contrast-color) 100%, transparent 0),
+    radial-gradient(10px circle at 313.5px 28px, var(--ccp-secondary-color) 100%, transparent 0),
+    radial-gradient(10px circle at 323.5px 28px, var(--ccp-primary-color) 100%, transparent 0);
+}
+
+.c-primary {
+  color: var(--ccp-primary-color);
+}
+
+.b-secondary {
+  background-color: var(--ccp-secondary-color);
+  left: 100px;
+  top: 100px;
+}
+
+.c-secondary {
+  color: var(--ccp-secondary-color);
+}
+
+.b-contrast {
+  background-color: var(--ccp-contrast-color);
+  left: 300px;
+  bottom: -100px;
+}
+
+.c-contrast {
+  color: var(--ccp-contrast-color);
+}
+
+.sign-up-button {
+  font-size: 20px;
+  padding: 1em 4em;
+  border: 0;
+  background-color: var(--ccp-primary-color);
+  color: white;
+  margin: 2rem 20rem 0;
+}
+
+.sign-up-button:hover {
+  cursor: pointer;
+  background-color: var(--ccp-secondary-color);
+}
