@@ -42,3 +42,6 @@ ENV PATH=$PATH:/usr/local/go/bin
 ################################################################################
 
 RUN go env -w GO111MODULE=auto
+EXPOSE 8080
+COPY . .
+CMD ["go", "run", "server.go"]
